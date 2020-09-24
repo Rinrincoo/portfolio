@@ -35,7 +35,7 @@ header{
  text-decoration: none;
  color:#0d0015;
  font-size: 100px;
- letter-spacing: -3px;
+ letter-spacing: -10px;
 }
 
 header button{
@@ -207,6 +207,7 @@ header button{
     color: #0d0015;
     font-size: 100px;
     line-height: 110px;
+    letter-spacing: -10px;
 }
 
 .title-line{
@@ -399,6 +400,7 @@ footer{
     font-size: 84px;
     font-weight: bold;
     padding-top: 50px;
+    letter-spacing: -10px;
 }
 
 #copyright{
