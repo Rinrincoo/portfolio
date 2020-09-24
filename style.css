@@ -1,0 +1,507 @@
+body{
+    background-color:rgb(255, 255, 255) ;
+    z-index: 0;
+    margin: 0 auto;
+}
+
+.wrapper{
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, p{
+    font-family: sans-serif;
+    color: rgb(111, 111, 111) ;
+}
+
+a {
+    text-decoration: none;
+    color: #0d0015;
+}
+ 
+section {
+    margin-bottom: 200px;
+}
+
+header{
+    padding: 38px;
+    padding-bottom: 0;
+    z-index: 2;
+    height: 300px;
+}
+
+#header-title h1>a{
+ text-decoration: none;
+ color:#0d0015;
+ font-size: 100px;
+ letter-spacing: -3px;
+}
+
+header button{
+    display: inline-block;
+    position: fixed;
+    font-size: 13px;
+    color: #0d0015;;
+    border:1px solid #0d0015;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-family: Mark, sans-serif;
+    font-weight: bold;
+    background-color: transparent;
+    z-index: 2; 
+}
+
+#right-button{
+  right:16px;
+}
+
+/* fadein */
+
+.fadein {
+    opacity : 0;  /*要素を透明にして隠し、位置を下100px */
+    transform : translate(0, 100px);
+    transition : all 1s;
+    z-index: 0;
+  }
+   
+  /* スクロールして、要素に「.active」が付いたら、透明度を1にし、位置を元の場所に戻します。 */
+  .fadein.active{
+    opacity : 1;
+    transform : translate(0, 0);
+    z-index: 0;
+  }
+  
+
+/* humbeger menu */
+  
+  .global-nav {
+    position: fixed;
+    left: -1500px; /* これで隠れる */
+    top: 0;
+    width: 100%; /* スマホに収まるくらい */
+    height: 100vh;
+    padding-top: 40px;
+    background-color:#fff;
+    /* background-color:rgb(255, 255, 255); */
+    transition: all .6s;
+    z-index: 200;
+    overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+  }
+  .hamburger {
+    position: fixed;
+    left: 30px;
+    top: 30px;
+    width: 50px; /* クリックしやすいようにちゃんと幅を指定する */
+    height:45px; /* クリックしやすいようにちゃんと高さを指定する */
+    cursor: pointer;
+    z-index: 300;
+    border: 1px solid #0d0015 ;
+    box-sizing: border-box;
+    vertical-align: middle;
+
+  }
+  .global-nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline;   /*リストを縦並び*/
+  }
+  .global-nav__item {
+    text-align: center;
+    margin:0;
+  }
+
+  .global-nav__item i{
+    padding:0px;
+  }
+
+  
+  .global-nav__item a {
+    display: inline-block;
+    padding: 8px 0;
+    border-bottom: 1px solid #0d0015;
+    text-decoration: none;
+    color: black;
+    margin-top: 40px;
+  }
+
+
+  /* .global-nav__item a:hover {
+    background-color: pink;
+  } */
+  .hamburger__line {
+    position: absolute;
+    right: 11px;
+    width: 22px;
+    height: 2px;
+    background-color: #0d0015;
+    transition: all .6s;
+  }
+  .hamburger__line--1 {
+    top: 14px;
+    background-color: #0d0015;
+  }
+  .hamburger__line--2 {
+    top: 22px;
+    background-color: #0d0015;
+  }
+  .hamburger__line--3 {
+    top: 30px;
+    background-color:#0d0015;
+  }
+  .black-bg {
+    position: fixed;
+    left: 0px;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color:lightgray;
+    opacity: 0.5;
+    /* background-color: rgb(255, 255, 255); */
+    /* opacity: 0; */
+    visibility: hidden;
+    transition: all .6s;
+    cursor: pointer;
+  }
+  /* 表示された時用のCSS */
+  .nav-open .global-nav {
+    left: 0px;
+  }
+  .nav-open .black-bg {
+    opacity:1;
+    visibility: visible;
+  }
+  .nav-open .hamburger__line--1 {
+    transform: rotate(45deg);
+    top: 20px;
+    background-color: #0d0015;
+  }
+  .nav-open .hamburger__line--2 {
+    width: 0;
+    left: 50%;
+    background-color:#0d0015;
+  }
+  .nav-open .hamburger__line--3 {
+    transform: rotate(-45deg);
+    top: 20px;
+    background-color:#0d0015;
+  }
+
+  .wrapper{
+    padding-bottom: 50px;
+  }
+
+/* humbager menu */
+
+
+
+.main-content{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.categoly-title h1{
+    font-weight: 900;
+    color: #0d0015;
+    font-size: 100px;
+    line-height: 110px;
+}
+
+.title-line{
+    border: 1px solid #0d0015;
+    margin-bottom: 100px;
+}
+
+#about img{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: auto;
+     border-radius: 50%;
+  }
+  
+
+.about-discription p{
+   color: rgb(111, 111, 111);
+   font-family: sans-serif;
+   font-size: 20px;
+}
+
+
+/* skill */
+#skill-title{
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+.skills{
+   display: flex;  
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.skill{
+    margin-top: 30px;
+}
+
+.skill i{
+   color: rgb(111, 111, 111); 
+}
+.skillicon{
+    display: block;
+    border: 1px solid rgba(192, 192, 192, 0.15);
+    background-color:rgba(192, 192, 192, 0.15);
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 20px;
+    
+}
+
+
+/* work */
+.work-item-mag{
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+   justify-content: space-between;
+}
+
+.work-item-inner{
+    display: block;
+    border: 1px solid rgba(192, 192, 192, 0.15) ;
+    width: 48%; 
+    margin-bottom: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.work-item-category{
+    font-family: sans-serif;
+    color: rgb(111, 111, 111);
+    margin-top: 30px;
+}
+
+.work-item img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.work-item-meta{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    vertical-align: text-bottom;
+}
+
+.img-sp{
+   width: 30% !important; 
+   height: auto !important;
+   margin: 0 auto;
+
+}
+
+/* services  */
+.services{
+    width: 100%; 
+    display: flex;
+    flex: wrap;
+    margin: 0 auto;
+  }
+  #service_items{
+     display: flex; /*要素を均等に横並びにする*/
+     justify-content: space-between; 
+  }
+
+  
+  .service_item{
+    /* display: inline-block; */
+    float: left;
+    width: 30% ;
+    height: 350px;
+    margin-right: 10px;
+    margin-bottom: 35px;
+    padding: 5px 20px;
+    border: solid 3px rgba(192, 192, 192, 0.15);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    vertical-align: middle;
+    overflow: hidden;
+   
+  }
+  
+  .service_item h2, h4{
+    text-align: center;
+    
+  }
+  
+  .service_item h4{
+    font-size: 12px;
+    color: grey;
+  }
+  
+  
+  .service_item p{
+    margin: 0;
+    display: inline;
+    font-size: 13px;
+  }
+  
+  .service_item li>i{
+    color: #0d0015;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+  
+
+  .service_icon{
+    text-align: center;
+    font-size: 50px;
+    color:#fff;
+      width: 80px;
+      height: 80px;
+      line-height: 85px;
+      border-radius: 50%;
+      background:rgb(111, 111, 111);/*背景色*/
+      margin: 10px auto;
+    }
+  
+    
+  
+    #service_item3{
+      margin-right:0 !important;
+    }
+  
+
+
+/* 　contact form */
+.bk_wrapper{
+    width: 100%;
+    background-color:#0d0015;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+
+
+footer{
+    background-color:#0d0015; 
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.TitleBlock{
+    color:rgb(255, 255, 255);;
+    font-size: 84px;
+    font-weight: bold;
+    padding-top: 50px;
+}
+
+#copyright{
+    text-align: center;
+}
+
+footer small{
+    display: block;
+    color:rgb(255, 255, 255); 
+    font-weight: 50;
+}
+
+footer p{
+    text-align: center;
+    color: lightgrey;
+    margin: 0 20px;
+    font-family: Mark, sans-serif;
+}
+
+/* medium screen (smartphone)*/
+@media screen and (max-width: 480px) {
+   section {
+       margin-bottom: 100px;
+   }
+
+   header{
+       width: 80%;
+       height: 200px;
+       padding-right: 0;
+       padding-left:0 ;
+       margin: 0 auto;
+   } 
+
+   #header-title h1{
+       margin-top: 40px;
+   }
+   
+   #header-title h1>a{
+        font-size: 50px;
+       }
+
+   .categoly-title h1{
+        font-size: 50px;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    
+    .title-line{
+        margin-bottom: 50px;
+    }
+
+    .skills{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .skill{
+        margin-top: 10px;
+    }
+
+    .about-discription p{
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    .skillicon{
+        width: 25%;
+        height: auto;
+        margin-top: 20px;
+        margin-left: 0px; 
+    }
+
+    .work-item-category{
+        font-size: 13px;
+    }
+
+    .work-item-inner {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    #service{
+        width: 100%;
+    }
+
+    #service_items{
+        display: block;
+        width: 100%;
+    }
+
+    .service_item{
+      width: 85%;
+    }
+
+    .TitleBlock{
+        font-size: 50px;
+    }
+
+    footer p{
+        font-size: 13px;
+        text-align: left;
+    }
+}
